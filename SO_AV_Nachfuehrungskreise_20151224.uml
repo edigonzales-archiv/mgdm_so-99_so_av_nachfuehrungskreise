@@ -3361,9 +3361,9 @@
 <SuppressAttributes>false</SuppressAttributes>
 <ShowInheritedAttributes>false</ShowInheritedAttributes>
 <Background>873</Background>
-<East>397</East>
-<South>415</South>
-<Width>166</Width>
+<East>395</East>
+<South>428</South>
+<Width>198</Width>
 <Height>46</Height>
 <Diagram>851</Diagram>
 <Documentation>874</Documentation>
@@ -3527,9 +3527,9 @@
 <SuppressAttributes>false</SuppressAttributes>
 <ShowInheritedAttributes>false</ShowInheritedAttributes>
 <Background>908</Background>
-<East>397</East>
-<South>329</South>
-<Width>89</Width>
+<East>396</East>
+<South>334</South>
+<Width>152</Width>
 <Height>46</Height>
 <Diagram>851</Diagram>
 <Documentation>909</Documentation>
