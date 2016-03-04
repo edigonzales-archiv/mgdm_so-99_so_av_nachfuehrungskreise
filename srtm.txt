@@ -1,0 +1,13 @@
+http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/srtm_37_03.zip
+
+37-02 bis 40-04
+
+gdal_merge.py -o srtm_ch.tif -co TILED=YES *.tif
+
+gdalwarp -s_srs EPSG:4326 -t_srs EPSG:2056 -co TILED=YES -co COMPRESS=DEFLATE srtm_ch.tif srtm_ch_lv95.tif
+
+gdalwarp -s_srs EPSG:4326 -t_srs EPSG:2056 -r cubic -co TILED=YES -co COMPRESS=DEFLATE srtm_ch.tif srtm_ch_lv95.tif
+
+gdaldem hillshade srtm_ch_lv95.tif srtm_ch_lv95_relief.tif -compute_edges -co TILED=YES -co COMPRESS=DEFLATE
+
+gdaladdo srtm_ch_lv95_relief.tif 2 4 8 16 32 64 128 

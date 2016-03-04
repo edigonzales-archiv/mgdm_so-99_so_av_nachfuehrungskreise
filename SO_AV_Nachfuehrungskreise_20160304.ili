@@ -1,0 +1,33 @@
+INTERLIS 2.3;
+
+/** Dieses Modell beschreibt die Nachführungskreise der amtlichen Vermessung.
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+!!@ IDGeoIV=SO-99
+!!@ furtherInformation=http://models.geo.so.ch/AGI/SO_AV_Nachfuehrungskreise_20160304.pdf
+!!------------------------------------------------------------------------------
+!! Version    | wer  | Änderung
+!!------------------------------------------------------------------------------
+!! 2016-03-04 | SZ   | Ablösung eigene Polygon-Structures durch GeometryCHLV95_V1.
+!! 2016-03-04 | SZ   | OID AS INTERLIS.UUIDOID;
+!! 2015-12-24 | SZ   | Ersterfassung.
+!!==============================================================================
+
+MODEL SO_AV_Nachfuehrungskreise_20160304 (de)
+AT "http://www.agi.so.ch"
+VERSION "2016-03-04"  =
+  IMPORTS GeometryCHLV95_V1;
+
+  TOPIC AV_Nachfuehrungskreise =
+    OID AS INTERLIS.UUIDOID;
+
+    CLASS AV_Nachfuehrungskreis =
+      Name : MANDATORY TEXT*255;
+      NF_Geometer : MANDATORY TEXT*255;
+      UID : TEXT*12;
+      Perimeter : MANDATORY GeometryCHLV95_V1.MultiSurface;
+    END AV_Nachfuehrungskreis;
+
+  END AV_Nachfuehrungskreise;
+
+END SO_AV_Nachfuehrungskreise_20160304.

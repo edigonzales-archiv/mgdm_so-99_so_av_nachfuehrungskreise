@@ -1,0 +1,14 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+
+java -jar /home/stefan/Apps/ili2pg-3.0.2/ili2pg.jar --dbhost localhost --dbport 5432 --dbdatabase rosebud2 --dbusr stefan --dbpwd ziegler12 --dbschema av_nf_kreise --nameByTopic --strokeArcs --schemaimport --modeldir . --models SO_AV_Nachfuehrungskreise_20151224 --defaultSrsCode 2056 --defaultSrsAuth EPSG
+
+
+
+java -jar /home/stefan/Apps/ili2pg-3.0.2/ili2pg.jar --dbhost localhost --dbport 5432 --dbdatabase rosebud2 --dbusr stefan --dbpwd ziegler12 --dbschema av_nf_kreise --nameByTopic --strokeArcs --schemaimport --modeldir "http://models.geo.admin.ch;." --models SO_AV_Nachfuehrungskreise_20160304 --defaultSrsCode 2056 --defaultSrsAuth EPSG --createGeomIdx
+
+
+java -jar /home/stefan/Apps/ili2pg-3.0.2/ili2pg.jar --dbhost localhost --dbport 5432 --dbdatabase rosebud2 --dbusr stefan --dbpwd ziegler12 --dbschema av_nf_kreise --nameByTopic --strokeArcs --export --modeldir "http://models.geo.admin.ch;." --models SO_AV_Nachfuehrungskreise_20160304 nf_kreise.xtf
+
+
+xmllint --format -o nf_kreise.xtf nf_kreise.xtf
