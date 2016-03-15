@@ -1,14 +1,14 @@
 INTERLIS 2.3;
 
-/** Dieses Modell beschreibt die Nachführungskreise der amtlichen Vermessung.
+/** Dieses Modell beschreibt die Nachfuehrungskreise der amtlichen Vermessung.
  */
 !!@ technicalContact=mailto:agi@bd.so.ch
 !!@ IDGeoIV=SO-99
 !!@ furtherInformation=http://models.geo.so.ch/AGI/SO_AV_Nachfuehrungskreise_20160304.pdf
 !!------------------------------------------------------------------------------
-!! Version    | wer  | Änderung
+!! Version    | wer  | Aenderung
 !!------------------------------------------------------------------------------
-!! 2016-03-04 | SZ   | Ablösung eigene Polygon-Structures durch GeometryCHLV95_V1.
+!! 2016-03-04 | SZ   | Abloesung eigene Polygon-Structures durch GeometryCHLV95_V1.
 !! 2016-03-04 | SZ   | OID AS INTERLIS.UUIDOID;
 !! 2015-12-24 | SZ   | Ersterfassung.
 !!==============================================================================
